@@ -6,7 +6,6 @@ const app =create_app();
 
 app.listen(5500, '0.0.0.0', async() =>{
     try {
-        // localhost: 
         await mongoose.connect(process.env.MONGODB_URI_CLOUD);
         console.log('[+] Server running on port 5500');
     } catch ({message}) {
